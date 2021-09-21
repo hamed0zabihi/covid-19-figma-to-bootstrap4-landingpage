@@ -1,84 +1,144 @@
 /* add font */
 @font-face {
-    font-family: 'redhat';
-    src: url('../font/redhatdisplay/RedHatDisplay-VariableFont_wght.ttf') format('ttf');
-  }
-  @font-face {
-    font-family: 'gelion';
-    src: url('../font/gelion/Gelion-Regular.ttf') format('ttf');
-  }
-  /* body */
-  body{
-      font-family: "gelion";
-  }
-  /* typography */
-  h1, h2, h3, h4, h5, h6 {
-    color: #035755;
-    font-weight: 700;
-    font-family: "gelion";
-  }
-  /* color */
-  :root{
-      --maincolor:#FA5652;
-  }
-  .main-color{
-      color:#FA5652,
-      
-  }
-  /* classes */
-  .navbar-nav .nav-link{  color:#035755;}
-  .navbar-nav li a {
-      display: block;
-    padding: 5px 80px;
-    color:#035755 !important;
-  }
-  .nav-contact{border: 2px solid #FB4C47;
-    box-sizing: border-box;
-    border-radius: 46px;max-width: 155px;
-   }
-    .nav-contact .nav-link {
-        color:#FF383D !important;
-        
-    }
-  .banner-content{
-      max-width: 550px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-right: 15px;
-      padding-left: 15px;
-      text-align: left;
-      float:right;
-  }
-  .tagline{
-    color:var(--maincolor);
-    font-family: "gelion";
-    font-size: 32px;
-    font-weight: bold;
-  }
-  .pragraph-content{
-    
-font-size: 24px;
-line-height: 190%;
-text-transform: capitalize;
-color: #4B4F51;
-padding-top: 15px;
-text-align: justify;
-
-  }
-.btn-banner{
-    min-width: 170px;   
-     padding: 20px 25px;
-     background-color: #FB4C47;
-     border-radius: 65px;
-     /* Let Us Help */
-     font-family: "gelion";
-     font-style: normal;
-     font-weight: bold;
-     font-size: 24px;
-     line-height: 29px;
-     text-transform: capitalize;
-     
+  font-family: "redhat";
+  src: url("../font/redhatdisplay/RedHatDisplay-VariableFont_wght.ttf")
+    format("ttf");
 }
-.btn-banner a{
-    color: #FFFFFF;
+@font-face {
+  font-family: "gelion";
+  src: url("../font/gelion/Gelion-Regular.ttf") format("ttf");
+}
+/* body */
+body {
+  font-family: "gelion";
+}
+/* typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #035755;
+  font-weight: 700;
+  font-family: "gelion";
+}
+/* color */
+:root {
+  --maincolor: #fa5652;
+}
+.main-color {
+  color: #fa5652;
+}
+/* classes */
+.navbar-nav .nav-link {
+  color: #035755;
+}
+.navbar-nav li a {
+  display: block;
+  padding: 5px 80px;
+  color: #035755 !important;
+}
+.nav-contact {
+  border: 2px solid #fb4c47;
+  box-sizing: border-box;
+  border-radius: 46px;
+  max-width: 155px;
+}
+.nav-contact .nav-link {
+  color: #ff383d !important;
+}
+.banner-content {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: left;
+  float: right;
+}
+.tagline {
+  color: var(--maincolor);
+  font-family: "gelion";
+  font-size: 26px;
+  font-weight: bold;
+}
+.pragraph-content {
+  font-size: 18px;
+  line-height: 190%;
+  text-transform: capitalize;
+  color: #4b4f51;
+  padding-top: 15px;
+  text-align: justify;
+}
+.btn-banner {
+  min-width: 170px;
+  padding: 20px 25px;
+  background-color: #fb4c47;
+  border-radius: 65px;
+  /* Let Us Help */
+  font-family: "gelion";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: capitalize;
+}
+.btn-banner a {
+  color: #ffffff;
+}
+
+.about-us-content {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: left;
+  float: left;
+}
+.tagline-title {
+  color: var(--maincolor);
+  font-family: "gelion";
+  font-weight: bold;
+  font-size: 18px;
+}
+.paragraph-content-about-us {
+  text-align: justify;
+  text-transform: capitalize;
+
+  color: #4b4f51;
+}
+.btn-about-us {
+  min-width: 120px;
+  padding: 14px 19px;
+  background-color: rgba(250, 86, 82, 0.15);
+  border-radius: 65px;
+
+  font-family: "gelion";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 29px;
+  text-transform: capitalize;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.btn-about-us a {
+  color: var(--maincolor);
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+  color: #fa5652;
+}
+.contagion-paragraph {
+  max-width: 570px;
+  font-family: "Gelion";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 39px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #4b4f51;
+  margin: auto;
 }
