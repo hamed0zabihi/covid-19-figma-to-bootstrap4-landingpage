@@ -106,7 +106,6 @@ h6 {
 .paragraph-content-about-us {
   text-align: justify;
   text-transform: capitalize;
-
   color: #4b4f51;
 }
 .btn-about-us {
@@ -114,7 +113,6 @@ h6 {
   padding: 14px 19px;
   background-color: rgba(250, 86, 82, 0.15);
   border-radius: 65px;
-
   font-family: "gelion";
   font-style: normal;
   font-weight: bold;
@@ -130,6 +128,7 @@ h6 {
   text-transform: capitalize;
   color: #fa5652;
 }
+/* contagion section */
 .contagion-paragraph {
   max-width: 570px;
   font-family: "Gelion";
@@ -141,4 +140,68 @@ h6 {
   text-transform: capitalize;
   color: #4b4f51;
   margin: auto;
+}
+.card {
+  background: #ffffff;
+  box-shadow: 0px 35px 87px rgba(0, 0, 0, 0.11);
+  border-radius: 10px;
+  text-align: center;
+}
+.card:hover {
+  border-bottom: 4px solid #ff383d;
+}
+.card-title {
+  font-family: "Gelion";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 147%;
+  /* identical to box height, or 53px */
+  text-transform: capitalize;
+}
+.card-text {
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  text-transform: capitalize;
+  color: #4b4f51;
+}
+.contagion {
+  background-image: url("../img/contagion/contagion-background-virus.svg");
+  background-position: -3% bottom;
+  background-repeat: no-repeat;
+  text-align: right;
+  padding-top: 10rem;
+}
+.symptomps {
+  background-image: url("../img/symptomps/symptoms-back2.svg"),
+    url("../img/symptomps/symptoms-back1.svg");
+  background-position: 3% 85%, 95% 100%;
+  background-size: 12%, 12%;
+  background-repeat: no-repeat;
+  text-align: right;
+  padding-top: 10rem;
+}
+.weshould-us-content {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: left;
+  float: right;
+}
+.number-waht-we-should {
+  background-color: rgba(250, 86, 82, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: var(--maincolor);
+  border-radius: 100%;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: "gelion";
 }
