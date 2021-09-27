@@ -30,7 +30,17 @@ h6 {
 .main-color {
   color: #fa5652;
 }
+a:hover {
+  text-decoration: none;
+}
 /* classes */
+/* margin-top */
+.padding-top-7 {
+  padding-top: 7rem;
+}
+.navbar-nav {
+  text-align: center;
+}
 .navbar-nav .nav-link {
   color: #035755;
 }
@@ -43,7 +53,9 @@ h6 {
   border: 2px solid #fb4c47;
   box-sizing: border-box;
   border-radius: 46px;
-  max-width: 155px;
+  /* max-width: 155px; */
+  width: auto;
+  padding: 2px;
 }
 .nav-contact .nav-link {
   color: #ff383d !important;
@@ -126,7 +138,7 @@ h6 {
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
-  color: #fa5652;
+  color: var(--maincolor);
 }
 /* contagion section */
 .contagion-paragraph {
@@ -172,6 +184,13 @@ h6 {
   text-align: right;
   padding-top: 10rem;
 }
+.about-us {
+  background-image: url("../img/about-us/background-01.svg"),
+    url("../img/about-us/background-01-litte.svg");
+  background-position: 101% 85%, 95% 100%;
+  background-size: 12%, 12%;
+  background-repeat: no-repeat;
+}
 .symptomps {
   background-image: url("../img/symptomps/symptoms-back2.svg"),
     url("../img/symptomps/symptoms-back1.svg");
@@ -180,6 +199,14 @@ h6 {
   background-repeat: no-repeat;
   text-align: right;
   padding-top: 10rem;
+}
+.we-should {
+  background-image: url("../img/what-should/background-01-green.svg"),
+    url("../img/what-should/background-02-little-green.svg"),
+    url("../img/what-should/background-03.svg");
+  background-position: 0% 30%, 95% 85%, 100% 95%;
+  background-size: 7%, 7%, 7%;
+  background-repeat: no-repeat;
 }
 .weshould-us-content {
   max-width: 550px;
@@ -205,7 +232,20 @@ h6 {
   text-transform: capitalize;
   font-family: "gelion";
 }
+/* data covid */
+footer,
+.data-covid,
+.newsletter {
+  background-color: #fff1f1;
+}
 /* newsletter */
+.newsletter {
+  background-image: url("../img/news-letter/background-01.svg"),
+    url("../img/news-letter/background-02-big.svg");
+  background-position: 90% 50%, 100% 100%;
+  background-size: 7%, 7%;
+  background-repeat: no-repeat;
+}
 .newsletter .newsletter-form {
   position: relative;
   max-width: 355px;
@@ -283,4 +323,56 @@ h6 {
 /* copy right */
 .copyright {
   font-size: 0.85rem;
+}
+/* map */
+.icon-marker {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 3.6em;
+  height: 3.6em;
+  font-size: 0.7em;
+  font-weight: bold;
+  background-color: #ff383d;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(black, 0.9);
+}
+.icon-marker:hover .icon-marker-tooltip {
+  display: block;
+}
+.icon-marker-tooltip {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  width: 16em;
+  font-size: 1.4em;
+  padding: 1em;
+  background-color: #035755;
+  border-radius: 0.4em;
+  margin-bottom: 1em;
+  box-shadow: 0 3px 5px rgba(black, 0.9);
+}
+.icon-marker-tooltip h2 {
+  color: #fff;
+}
+.icon-marker-tooltip:before {
+  display: block;
+  position: absolute;
+  bottom: -0.6em;
+  left: 50%;
+  content: "";
+  width: 1.4em;
+  height: 1.4em;
+  background-color: #00402e;
+  transform: rotate(45deg);
+  margin-left: -0.7em;
+}
+/* table */
+.page-link {
+  color: #ff383d;
+}
+.page-link:hover {
+  color: #00402e;
 }

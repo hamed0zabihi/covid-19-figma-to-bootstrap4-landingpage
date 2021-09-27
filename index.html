@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/dataTables.bootstrap4.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>landing page covid-19</title>
+    <script src="js/leaflet.js"></script>
   </head>
 
   <body>
@@ -50,9 +53,11 @@
             </ul>
           </div>
         </nav>
-        <!--/.Navbar -->
+        <!--end Navbar -->
       </section>
     </header>
+    <!-- end header -->
+
     <!-- banner -->
     <section id="banner">
       <div class="container-fluid">
@@ -82,8 +87,10 @@
         </div>
       </div>
     </section>
+    <!-- end banner -->
+
     <!-- about us -->
-    <section id="about-us">
+    <section id="about-us" class="about-us">
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-md-6">
@@ -108,6 +115,8 @@
         </div>
       </div>
     </section>
+    <!-- end about us -->
+
     <!-- contagion -->
     <section id="contagion" class="contagion m-2">
       <div class="container">
@@ -189,8 +198,10 @@
         </div>
       </div>
     </section>
+    <!-- end contagion -->
+
     <!-- symptomps -->
-    <section class="symptomps p-4 mt-2" id="#symptomps">
+    <section class="symptomps p-4 padding-top-7" id="#symptomps">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-12">
@@ -218,8 +229,10 @@
         </div>
       </div>
     </section>
+    <!-- end symptomps -->
+
     <!-- what we should do -->
-    <section class="we-should mt-4">
+    <section class="we-should padding-top-7">
       <div class="container-fluid">
         <!-- title -->
         <div class="row align-items-center">
@@ -319,7 +332,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-md-4">
             <img
               src="img/what-should/03.svg"
@@ -329,7 +341,6 @@
           </div>
           <div class="col"></div>
         </div>
-
         <div class="row align-items-center">
           <div class="col"></div>
           <div class="col-md-4 order-1 order-md-0">
@@ -358,16 +369,33 @@
           <div class="col order-md-2"></div>
         </div>
       </div>
-      <!-- container-fluid -->
+      <!-- end container-fluid -->
     </section>
-    <!-- newsletter section -->
-    <section
-      id="newsletter"
-      class="py-4 mt-4"
-      style="background-color: #fff1f1"
-    >
-      <div class="container-fluid">
+    <!-- end what we should -->
+
+    <!-- section covid-19 data -->
+    <section id="data-covid" class="padding-top-7 pt-5 data-covid">
+      <div class="container">
         <div class="row align-items-center">
+          <div class="col-md-8">
+            <div id="map" style="min-height: 380px"></div>
+          </div>
+          <!-- start table -->
+          <div class="col-md-4">
+            <div
+              class="row align-items-center tableformap"
+              id="tableformap"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end covid-19 data -->
+
+    <!-- newsletter section -->
+    <section id="newsletter" class="py-4 padding-top-7 newsletter">
+      <div class="container-fluid">
+        <div class="row align-items-center padding-top-7">
           <div class="col-md-12">
             <div class="justify-content-center text-center">
               <h4 class="newsletter-title">Have Question in mind?</h4>
@@ -375,7 +403,7 @@
             </div>
           </div>
         </div>
-        <div class="row align-items-center">
+        <div class="row align-items-center mt-5">
           <div class="col"></div>
           <div class="col-md-4">
             <form
@@ -399,9 +427,11 @@
         </div>
       </div>
     </section>
+    <!-- end newsletter -->
+
     <!-- footer -->
-    <footer style="background-color: #fff1f1">
-      <section>
+    <footer>
+      <section class="padding-top-7">
         <div class="container">
           <div class="row">
             <!-- Site logo -->
@@ -450,7 +480,10 @@
                   <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
                 <a href="#">
-                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                  <i
+                    class="fa fa-youtube-play main-color"
+                    aria-hidden="true"
+                  ></i>
                 </a>
                 <a href="#">
                   <i class="fa fa-vimeo" aria-hidden="true"></i>
@@ -473,7 +506,30 @@
         </div>
       </section>
     </footer>
+    <!-- end footer -->
   </body>
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/lodash.js"></script>
+  <script src="js/jquery.dataTables.min.js"></script>
+  <script src="js/dataTables.bootstrap4.min.js"></script>
+  <script>
+    // code to render map here...
+    var map = L.map("map", {
+      center: [35.7012, 51.3333],
+      zoom: 3,
+    });
+
+    map.scrollWheelZoom.disable();
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution:
+        '&copy;  < a href = "https://www.openstreetmap.org/copyright" > OpenStreetMap < /a> contributors',
+    }).addTo(map);
+    var greenIcon = L.icon({
+      iconUrl: "img/marker-icon.png",
+      iconSize: [16, 16], // size of the icon
+    });
+  </script>
+  <script src="js/coronaData.js"></script>
 </html>
